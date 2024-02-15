@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=DM+Serif+Display&family=Open+Sans:ital,wght@0,300;1,600&family=Orbitron:wght@600&family=Roboto:wght@100&family=Rubik+Maze&family=Rubik+Spray+Paint&family=Rubik:wght@300&family=Secular+One&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Secular One", sans-serif;
+
+}
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom, #e0c095, #d9b680, #e0c095);
+}
+.container {
+  margin-top: 50px;
+  width: 100vw;
+  perspective: 1000px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.container > div {
+  margin: 10px;
+  min-width: 20vw;
+}
+.box-wrap {
+  display: flex;
+}
+.box {
+  height: 250px;
+  width: 100%;
+  min-width: 100px;
+  display: flex;
+  top: 100px;
+  left: 100px;
+  transform-style: preserve-3d;
+  animation: animate1 5s infinite;
+}
+
+@keyframes animate1 {
+  0% {
+    transform: rotateX(5deg);
+  }
+  50% {
+    transform: rotateX(-5deg);
+  }
+  100% {
+    transform: rotateX(5deg);
+  }
+}
+.box.active {
+  animation: animate 1s infinite;
+}
+@keyframes animate {
+  0% {
+    transform: rotateX(0deg);
+  }
+  100% {
+    transform: rotateX(-180deg);
+  }
+}
+.card {
+  text-align: center;
+  color: wheat;
+  background-color: brown;
+  border: 2px solid wheat;
+  font-size: 32px;
+  box-sizing: border-box;
+  position: absolute;
+}
+.front-back {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 8em;
+}
+.sides {
+  width: 40px;
+  height: 250px;
+}
+.up-down {
+  height: 50px;
+  width: 100%;
+  transform: rotateX(90deg);
+}
+.front {
+  transform: translateZ(25px);
+}
+.back {
+  transform: translateZ(-25px) rotateZ(180deg) rotateY(180deg);
+}
+.left {
+  right: -25px;
+  transform: rotateY(-90deg);
+}
+.right {
+  left: -25px;
+  transform: rotateY(90deg);
+}
+.top {
+  top: 175px;
+  height: 5vh;
+}
+.bottom {
+  bottom: 175px;
+}
+
+.binary {
+  font-size: 10em;
+  font-weight: 700;
+  color: brown;
+  width: 100vw;
+  padding-top: 70px;
+  display: flex;
+  justify-content: center;
+}
+.title {
+  font-size: 3em;
+  color: brown;
+}
