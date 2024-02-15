@@ -43,7 +43,10 @@ function updateCountdown(targetDate) {
 
 // Function to start countdown interval
 function startCountdown() {
-  const targetDate = new Date(2024, 4 - 1, 29, 18, 30, 0);
+  // (yyyy, mm-1, dd, hh, mm, ss)
+  // const targetDate = new Date(2024, 4 - 1, 29, 18, 30, 0);
+  const targetDate = new Date();
+  targetDate.setMonth(targetDate.getMonth() + 3)
   const interval = setInterval(() => {
     updateCountdown(targetDate);
   }, 1010);

@@ -11,7 +11,7 @@ body {
   background: linear-gradient(to bottom, #e0c095, #d9b680, #e0c095);
 }
 .container {
-  margin-top: 50px;
+  padding-top: 50px;
   width: 100vw;
   perspective: 1000px;
   display: flex;
