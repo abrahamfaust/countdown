@@ -43,10 +43,18 @@ function updateCountdown(targetDate) {
 
 // Function to start countdown interval
 function startCountdown() {
+
+  // this is a static tade that will be goon only until specific date
+  // for a real countdown you should use this
+  
   // (yyyy, mm-1, dd, hh, mm, ss)
   // const targetDate = new Date(2024, 4 - 1, 29, 18, 30, 0);
+
+  // this date runs all times
   const targetDate = new Date();
   targetDate.setMonth(targetDate.getMonth() + 3)
+
+
   const interval = setInterval(() => {
     updateCountdown(targetDate);
   }, 1010);
